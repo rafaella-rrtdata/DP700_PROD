@@ -1,0 +1,40 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {
+    "allowModernEvaluationEngine": true
+  },
+  "name": "Dataflow_1",
+  "queryGroups": [],
+  "documentLocale": "es-ES",
+  "queriesMetadata": {
+    "orders1": {
+      "queryId": "13daf3dd-06df-42b1-8e65-a99059c0eeb7",
+      "queryName": "orders1",
+      "loadEnabled": false
+    },
+    "DefaultDestination": {
+      "queryId": "9f5e8e71-e4e2-498c-a826-b273336de5c0",
+      "queryName": "DefaultDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "orders1_DataDestination": {
+      "queryId": "0a302eeb-e6ea-401f-a8d6-1a23d74a1f2b",
+      "queryName": "orders1_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    }
+  },
+  "connections": [
+    {
+      "path": "https://rrtdata-my.sharepoint.com/personal/rafaellaromer_rrtdata_onmicrosoft_com/",
+      "kind": "Web",
+      "connectionId": "{\"ClusterId\":\"9e267214-e760-46c1-af10-efb94aa345ba\",\"DatasourceId\":\"2f0591be-4a41-4f50-9c65-686ae81bb9c7\"}"
+    },
+    {
+      "path": "Lakehouse",
+      "kind": "Lakehouse",
+      "connectionId": "{\"ClusterId\":\"9e267214-e760-46c1-af10-efb94aa345ba\",\"DatasourceId\":\"4a77aea7-de12-4bf0-b79d-3bdedf483738\"}"
+    }
+  ]
+}
