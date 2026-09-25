@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "Notebook_TEST_GIT"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "3187586d-0015-945a-43d8-44d6e52e006f"
+  }
+}
