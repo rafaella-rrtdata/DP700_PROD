@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "Notebook Get Orders Data"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "3eaabf7a-32b1-98e2-4179-d18c2f0eba72"
+  }
+}
