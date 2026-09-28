@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Eventhouse",
+    "displayName": "RTI_SampleBikes",
+    "description": "RTI_SampleBikes"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "7b6514ba-41d7-a1d0-4f16-b9386675fe47"
+  }
+}

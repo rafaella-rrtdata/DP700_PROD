@@ -1,0 +1,22 @@
+{
+  "queryset": {
+    "version": "1.0.0",
+    "dataSources": [
+      {
+        "id": "ad213cbc-1dd2-442d-80c2-b0d66e4f8d32",
+        "clusterUri": "",
+        "type": "Fabric",
+        "databaseItemId": "647e43c4-4566-97ee-4673-f05cab8cd803"
+      }
+    ],
+    "tabs": [
+      {
+        "id": "9a3d6a58-4500-4d77-b5d5-2263c67a9977",
+        "content": "//***********************************************************************************************************\n// Here are two articles to help you get started with KQL:\n// KQL reference guide - https://aka.ms/KQLguide\n// SQL - KQL conversions - https://aka.ms/sqlcheatsheet\n//***********************************************************************************************************\n\n// Use \"take\" to view a sample number of records in the table and check the data.\n\nSampleBicycles\n| take 100\n\n\n// records per street - take 10\n\nSampleBicycles\n| take  10\n|project Street, No_Bikes\n\n// rename columns\n\nSampleBicycles\n| project Street, [\"Number of Empty Docks\"] = No_Empty_Docks\n|take 10\n\n// Summarize data by using KQL\n\nSampleBicycles\n| summarize [\"Total bikes\"] = sum(No_Bikes) \n\nSampleBicycles\n| summarize [\"Total bikes\"] = sum(No_Bikes) by Neighbourhood\n| project Neighbourhood, [\"Total bikes\"]\n\n// order by\n\nSampleBicycles\n| summarize [\"Total bikes\"] = sum(No_Bikes) by Neighbourhood\n| project Neighbourhood = case(isempty( Neighbourhood) or isnull( Neighbourhood) , \"Unidentified\", Neighbourhood), [\"Total bikes\"]\n|order by Neighbourhood asc \n\n//------------- TRYING SQL \n\n SELECT TOP 100 * from SampleBicycles\n\n select top 10 Street, No_Bikes\n from SampleBicycles\n\n select top 10 street, No_Empty_Docks as [Number of empity docs]\n from SampleBicycles\n\n select sum(No_Bikes) as [Total Bikes]\n from SampleBicycles;\n\n select Neighbourhood, sum(No_Bikes) as [Total Bikes]\n from SampleBicycles\n group by Neighbourhood;\n\n// treat nulls and order by\n\n select \n    case \n        when Neighbourhood is null or Neighbourhood = '' then 'Unidentified'\n        else Neighbourhood\n    end as Neighbourhood,\n    sum(No_Bikes) as [Total Bikes]\nfrom SampleBicycles \ngroup by\n    case \n        when Neighbourhood is null or Neighbourhood = '' then 'Unidentified'\n        else Neighbourhood\n    end\norder by Neighbourhood asc\n;\n\n    \n//filter\n\n select \n    case \n        when Neighbourhood is null or Neighbourhood = '' then 'Unidentified'\n        else Neighbourhood\n    end as Neighbourhood,\n    sum(No_Bikes) as [Total Bikes]\nfrom SampleBicycles \ngroup by\n    case \n        when Neighbourhood is null or Neighbourhood = '' then 'Unidentified'\n        else Neighbourhood\n    end\nhaving Neighbourhood='Chelsea'\norder by Neighbourhood asc\n;\n\n\n\n\n",
+        "title": "Tab",
+        "dataSourceId": "ad213cbc-1dd2-442d-80c2-b0d66e4f8d32"
+      }
+    ],
+    "querysetType": "Standalone"
+  }
+}

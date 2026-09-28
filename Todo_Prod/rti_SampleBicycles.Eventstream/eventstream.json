@@ -1,0 +1,121 @@
+{
+  "sources": [
+    {
+      "id": "640a52bf-8c95-4a02-b7ef-691cffc31e90",
+      "name": "sample-bicycles",
+      "type": "SampleData",
+      "properties": {
+        "type": "Bicycles"
+      }
+    }
+  ],
+  "destinations": [
+    {
+      "id": "15f08017-30c6-4926-9f99-6ec31c1f11ea",
+      "name": "f71fa501-ea8c-4f05-b09b-e5a495920ac8",
+      "type": "Eventhouse",
+      "properties": {
+        "dataIngestionMode": "DirectIngestion",
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "itemId": "647e43c4-4566-97ee-4673-f05cab8cd803",
+        "tableName": "SampleBicycles",
+        "connectionName": "rti_SampleBicycles_jvffwn",
+        "mappingRuleName": "SampleBicycles_mapping"
+      },
+      "inputNodes": [
+        {
+          "name": "rti_SampleBicycles-stream"
+        }
+      ]
+    },
+    {
+      "id": "d4a8c246-eba0-4b91-8b53-caa002baac08",
+      "name": "Eventhouse",
+      "type": "Eventhouse",
+      "properties": {
+        "dataIngestionMode": "ProcessedIngestion",
+        "workspaceId": "00000000-0000-0000-0000-000000000000",
+        "itemId": "647e43c4-4566-97ee-4673-f05cab8cd803",
+        "databaseName": "RTI_SampleBikes",
+        "tableName": "SampleBicycles",
+        "inputSerialization": {
+          "type": "Json",
+          "properties": {
+            "encoding": "UTF8"
+          }
+        }
+      },
+      "inputNodes": [
+        {
+          "name": "rti_SampleBicycles-stream"
+        }
+      ],
+      "inputSchemas": [
+        {
+          "name": "rti_SampleBicycles-stream",
+          "schema": {
+            "columns": [
+              {
+                "name": "BikepointID",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "Street",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "Neighbourhood",
+                "type": "Nvarchar(max)",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "Latitude",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "Longitude",
+                "type": "Float",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "No_Bikes",
+                "type": "BigInt",
+                "fields": null,
+                "items": null
+              },
+              {
+                "name": "No_Empty_Docks",
+                "type": "BigInt",
+                "fields": null,
+                "items": null
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "streams": [
+    {
+      "id": "0b3e8ca5-dde6-45a0-97d0-7cee57a151c3",
+      "name": "rti_SampleBicycles-stream",
+      "type": "DefaultStream",
+      "properties": {},
+      "inputNodes": [
+        {
+          "name": "sample-bicycles"
+        }
+      ]
+    }
+  ],
+  "operators": [],
+  "compatibilityLevel": "1.1"
+}
