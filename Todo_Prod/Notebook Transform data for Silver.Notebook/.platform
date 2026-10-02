@@ -1,11 +1,12 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
   "metadata": {
-    "type": "Lakehouse",
-    "displayName": "LH_01"
+    "type": "Notebook",
+    "displayName": "Notebook Transform data for Silver",
+    "description": "New notebook"
   },
   "config": {
     "version": "2.0",
-    "logicalId": "4b1f55e5-7400-91ae-48a5-eec75cfa9d05"
+    "logicalId": "e511765c-2e0c-9dc1-4d8b-65536678a4b3"
   }
 }
