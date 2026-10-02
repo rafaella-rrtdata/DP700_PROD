@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "SemanticMOdel_Medallion_Sales"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "43108eb9-1299-b2ee-4b23-8b1dd8ef82df"
+  }
+}
