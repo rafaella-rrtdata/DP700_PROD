@@ -20,6 +20,23 @@
 # META   }
 # META }
 
+# CELL ********************
+
+# MAGIC %%configure 
+# MAGIC { 
+# MAGIC    "conf": {
+# MAGIC        "spark.native.enabled": "true", 
+# MAGIC        "spark.shuffle.manager": "org.apache.spark.shuffle.sort.ColumnarShuffleManager" 
+# MAGIC    } 
+# MAGIC }
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
+
 # PARAMETERS CELL ********************
 
 table_name ="dbo.sales"
