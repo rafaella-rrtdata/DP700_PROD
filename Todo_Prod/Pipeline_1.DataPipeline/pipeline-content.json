@@ -4,7 +4,7 @@
       {
         "type": "RefreshDataflow",
         "typeProperties": {
-          "dataflowId": "f676a9c6-542e-98c5-4741-10b849e3ccd8",
+          "dataflowId": "c1d59992-76d0-b223-4f77-28ffcc4e4655",
           "workspaceId": "00000000-0000-0000-0000-000000000000",
           "notifyOption": "NoNotification",
           "dataflowType": "DataflowFabric",
@@ -17,7 +17,7 @@
           "secureInput": false,
           "secureOutput": false
         },
-        "name": "Dataflow Orders",
+        "name": "Dataflow1",
         "dependsOn": []
       }
     ]
